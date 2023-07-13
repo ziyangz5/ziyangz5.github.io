@@ -1,11 +1,15 @@
 ---
-title: 'Future Blog Post'
+title: 'TorchLib + CMake + Windows = 0xc0000135'
 date: 2199-01-01
-permalink: /posts/2012/08/blog-post-4/
+permalink: /posts/2023/07/blog-post-1/
 tags:
-  - cool posts
-  - category1
-  - category2
+  - Log
+  - CUDA
+  - TorchLib
 ---
 
-This post will show up by default. To disable scheduling of future posts, edit `config.yml` and set `future: false`. 
+Passed compiling. Unable to run with exit code 0xc0000135. Turns out that the cmake configuration is slightly different on windows.
+
+Instead of adding "C:\\PATH\\TO\\libtorch" to the CMAKE_PREFIX_PATH, you need to add "C:\\PATH\\TO\\libtorch\\lib".
+
+Added. Problem solved.
