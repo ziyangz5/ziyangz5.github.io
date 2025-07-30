@@ -1,27 +1,24 @@
 ---
-layout: default
+layout: single
 ---
 
-<article>
-  <h1>{{ page.title }}</h1>
-
-  {% if page.venue %}
-    <p><strong>Venue:</strong> {{ page.venue }}</p>
-  {% endif %}
-
-  {% if page.date %}
-    <p><strong>Date:</strong> {{ page.date | date: "%B %d, %Y" }}</p>
-  {% endif %}
+<article class="post-content" role="main">
+  <header>
+    <h1>{{ page.title }}</h1>
+    {% if page.date %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+    {% endif %}
+  </header>
 
   {% if page.authors %}
     <p><strong>Authors:</strong> {{ page.authors }}</p>
   {% endif %}
-
+  {% if page.venue %}
+    <p><strong>Venue:</strong> {{ page.venue }}</p>
+  {% endif %}
   {% if page.paperurl %}
-    <p><a href="{{ page.paperurl }}" target="_blank">View Paper</a></p>
+    <p><a href="{{ page.paperurl }}" target="_blank" rel="noopener">View Paper ↗</a></p>
   {% endif %}
 
-  {% if page.excerpt %}
-    <p>{{ page.excerpt }}</p>
-  {% endif %}
+  {{ content }}
 </article>
