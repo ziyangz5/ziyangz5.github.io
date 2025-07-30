@@ -1,24 +1,24 @@
 ---
-layout: single
+layout: default
 ---
 
-<article class="post-content" role="main">
-  <header>
-    <h1>{{ page.title }}</h1>
-    {% if page.date %}
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
-    {% endif %}
-  </header>
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% endif %}
 
-  {% if page.authors %}
-    <p><strong>Authors:</strong> {{ page.authors }}</p>
-  {% endif %}
-  {% if page.venue %}
-    <p><strong>Venue:</strong> {{ page.venue }}</p>
-  {% endif %}
-  {% if page.paperurl %}
-    <p><a href="{{ page.paperurl }}" target="_blank" rel="noopener">View Paper ↗</a></p>
-  {% endif %}
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
 
-  {{ content }}
-</article>
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <div class="archive">
+    {% unless page.header.overlay_color or page.header.overlay_image %}
+      <h1 class="page__title">{{ page.title }}</h1>
+    {% endunless %}
+    {{ content }}
+  </div>
+</div>

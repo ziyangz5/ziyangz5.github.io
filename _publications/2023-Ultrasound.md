@@ -1,5 +1,4 @@
 ---
-layout: publication
 title: "A fully integrated wearable ultrasound system to monitor deep tissues in moving subjects"
 collection: publications
 permalink: /publication/2023-Ultrasound

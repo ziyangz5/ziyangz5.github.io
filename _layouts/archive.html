@@ -19,6 +19,17 @@ layout: default
     {% unless page.header.overlay_color or page.header.overlay_image %}
       <h1 class="page__title">{{ page.title }}</h1>
     {% endunless %}
+
+    {% if page.authors %}
+      <p><strong>Authors:</strong> {{ page.authors }}</p>
+    {% endif %}
+    {% if page.venue %}
+      <p><strong>Venue:</strong> {{ page.venue }}</p>
+    {% endif %}
+    {% if page.paperurl %}
+      <p><a href="{{ page.paperurl }}" target="_blank" rel="noopener">View Paper ↗</a></p>
+    {% endif %}
+
     {{ content }}
   </div>
 </div>
