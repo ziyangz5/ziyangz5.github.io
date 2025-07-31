@@ -5,5 +5,6 @@ permalink: /publication/2024-GlassNet
 date: 2024-5-01
 authors: <strong><u>Ziyang Zhang</u></strong>, Edgar Simo-Serra
 venue: 'Computational Visual Media'
+excerpt: In Press.
 paperurl: 'https://arxiv.org/abs/2405.19056'
 ---
