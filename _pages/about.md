@@ -8,4 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student studying in computer graphics in Waseda University, Japan. I use this website as my personal page, writing random articles and logging some technical details during my projects.
+I received my Ph.D. in Computer Graphics from Waseda University, Japan. I am currently working as a game developer at Polyphony Digital. My research interests include computer graphics and machine learning.
+
+I use this website as my personal page to share articles and technical notes from my projects.
